@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/constants.dart';
 import 'package:food_app/features/home/presentation/views/widgets/app_header.dart';
+import 'package:food_app/features/home/presentation/views/widgets/categories.dart';
 import 'package:food_app/features/home/presentation/views/widgets/search_area.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -9,12 +10,12 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color.fromARGB(255, 245, 242, 242),
+      color: const Color.fromARGB(255, 245, 242, 242),
       width: width(context),
       height: height(context),
       child:const SafeArea(
           child: Column(
-        children: [AppHeader(),SearchArea()],
+        children: [AppHeader(),SearchArea(),Categories()],
       )),
     );
   }

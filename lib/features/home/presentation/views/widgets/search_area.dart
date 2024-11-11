@@ -24,22 +24,25 @@ class SearchArea extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20),
                         borderSide: BorderSide.none),
                     hintText: "Search",
-                    prefixIcon: const Icon(Icons.search)),
+                    hintStyle:const TextStyle(color: Colors.grey),
+                    prefixIcon: const Icon(Icons.search),
+                    prefixIconColor: Colors.grey),
               ),
             ),),
-          const SizedBox(
-            height: 10,
-          ),
-          InkWell(
-              child: Container(
-            padding: const EdgeInsets.all(15),
-            decoration: BoxDecoration(
-                color: Colors.red, borderRadius: BorderRadius.circular(100)),
-            child: SvgPicture.asset(
-              "${imagepath}filter-svgrepo-com.svg",
-              color: Colors.white,
-            ),
-          ))
+          
+          Padding(
+            padding: const EdgeInsets.only(left: 10.0),
+            child: InkWell(
+                child: Container(
+              padding: const EdgeInsets.all(13),
+              decoration: BoxDecoration(
+                  color: Colors.red, borderRadius: BorderRadius.circular(100)),
+              child: SvgPicture.asset(
+                "${imagepath}filter-svgrepo-com.svg",
+                color: Colors.white,
+              ),
+            )),
+          )
         ],
       ),
     );
