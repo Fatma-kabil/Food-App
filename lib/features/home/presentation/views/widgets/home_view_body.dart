@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_app/constants.dart';
 import 'package:food_app/features/home/presentation/views/widgets/app_header.dart';
 import 'package:food_app/features/home/presentation/views/widgets/categories.dart';
+import 'package:food_app/features/home/presentation/views/widgets/popular_section.dart';
 import 'package:food_app/features/home/presentation/views/widgets/search_area.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -15,7 +16,7 @@ class HomeViewBody extends StatelessWidget {
       height: height(context),
       child:const SafeArea(
           child: Column(
-        children: [AppHeader(),SearchArea(),Categories()],
+        children: [AppHeader(),SearchArea(),Categories(),PopularSection()],
       )),
     );
   }
