@@ -14,10 +14,12 @@ class HomeViewBody extends StatelessWidget {
       color: const Color.fromARGB(255, 245, 242, 242),
       width: width(context),
       height: height(context),
-      child:const SafeArea(
-          child: Column(
-        children: [AppHeader(),SearchArea(),Categories(),PopularSection()],
-      )),
+      child:const SingleChildScrollView(
+        child:  SafeArea(
+            child: Column(
+          children: [AppHeader(),SearchArea(),Categories(),PopularSection(),PopularSection()],
+        )),
+      ),
     );
   }
 }
